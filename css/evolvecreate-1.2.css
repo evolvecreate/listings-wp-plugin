@@ -1,0 +1,367 @@
+/* LISTINGS SEARCH */
+
+.form_listing-options
+{
+    margin-top: 10px;
+}
+
+.form_listing-options input
+{
+    color: #162b38;
+}
+
+.form_listing-options input,
+.form_listing-options select
+{
+    margin-bottom: 8px !important;
+}
+
+.form_listing-options select
+{
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /* sbmontecito specific */
+    background-color: #8ba4b3;
+    height: 48px;
+}
+
+.field_search
+{
+    max-width: 700px;
+    margin-top: 10px;
+}
+
+.field_priceMin,
+.field_priceMax
+{
+    width: 150px;
+}
+
+
+
+/* LISTINGS */
+
+.list_thumbs
+{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.list_thumbs li
+{
+    list-style-type: none;
+    display: inline;
+    cursor: pointer;
+}
+
+.list_thumbs li img
+{
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.list_thumbs li.active img
+{
+    opacity: 1;
+}
+
+.list_listings
+{
+    padding-top: 10px;
+    padding-left: 0;
+}
+
+.list_listings .listing
+{
+    list-style-type: none;
+    margin-bottom: 40px;
+    margin-right: 0.3%;
+    max-width: 33%;
+    min-width: 375px;
+    float: left;
+}
+
+.list_listings .listing:nth-child(3n + 1) {
+    clear: both;
+}
+
+.listing h1
+{
+    font-size: 28px !important;
+    font-weight: 300;
+}
+
+.listing h1,
+.listing h2,
+.listing h3
+{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.listing h2,
+.listing h3
+{
+    font-weight: 100;
+    font-size: 22px !important;
+}
+
+.listing .layout
+{
+    width: 100%;
+    font-weight: 100;
+    min-height: 75px;
+}
+
+.listing.single-listing .location,
+.listing.single-listing .layout
+{
+    width: 48%;
+    float: left;
+}
+
+.listing.single-listing .location
+{
+    float: left;
+}
+
+.listing.single-listing .layout
+{
+    float: right;
+    text-align: right;
+}
+
+.list_listings .layout
+{
+    margin-bottom: 40px;
+}
+
+.button_load-more-listings
+{
+    margin-bottom: 20px;
+}
+
+
+
+.listing .details
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.listing .details .list_details
+{
+    float: left;
+    padding-left: 0;
+    min-width: 40%
+}
+
+.listing .details .list_details .fieldName
+{
+    color: #bbb;
+}
+
+.listing .list_details li
+{
+    padding-left: 45px;
+    background-position: 0 0;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    list-style: none;
+    text-indent: 0;
+    min-height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.listing .description
+{
+    margin-top: 20px;
+}
+
+
+.float { float: left; }
+.clear { clear: both; }
+.nowrap { white-space: nowrap; }
+
+
+#panel_admin-settings .fieldRow:hover
+{
+    background-color: #ccc;
+}
+
+#panel_admin-settings .fieldRow .fieldName
+{
+    color: #08f;
+    width: calc(200px - 16px);
+    padding-top: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 6px;
+}
+
+#panel_admin-settings .fieldRow:hover .fieldName
+{
+    color: #fff;
+}
+
+.listing .photos
+{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+#slideshow_listing-photos
+{
+    margin-bottom: 10px;
+}
+
+#slideshow_listing-photos,
+#slideshow_listing-photos .slide,
+#slideshow_listing-photos .slide .listing-photo,
+.mainPhoto
+{
+    width: 100%;
+    height: 300px;
+}
+
+.single-listing #slideshow_listing-photos,
+.single-listing #slideshow_listing-photos .slide,
+.single-listing #slideshow_listing-photos .slide .listing-photo,
+.single-listing .mainPhoto
+{
+    height: 500px;
+}
+
+
+#slideshow_listing-photos .slide .listing-photo
+{
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#slideshow_listing-photos .button_previous,
+#slideshow_listing-photos .button_next
+{
+    top: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 1s;
+    height: 100%;
+    width: 65px;
+}
+
+#slideshow_listing-photos:hover .button_previous,
+#slideshow_listing-photos:hover .button_next
+{
+    opacity: 0.3;
+}
+
+#slideshow_listing-photos .button_previous:hover,
+#slideshow_listing-photos .button_next:hover
+{
+    opacity: 0.7;
+}
+
+#slideshow_listing-photos .button_previous .arrow,
+#slideshow_listing-photos .button_next .arrow
+{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: calc(50% - 12px);
+    font-size: 24px;
+    line-height: 24px;
+}
+
+
+
+
+
+/* LEAD FORM */
+
+.form_listing-lead
+{
+    margin-bottom: 20px;
+}
+
+.form_listing-lead button[type="submit"]
+{
+    margin-top: 4px;
+}
+
+/* TEMP THEME */
+
+.entry-header
+{
+    display: none;
+}
+
+.entry-content
+{
+    width: 100% !important;
+}
+
+.list_thumbs li.thumb img
+{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 4px;
+}
+
+.listing-agent
+{
+    color: #aaa;
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #slideshow_listing-photos,
+    #slideshow_listing-photos .slide,
+    #slideshow_listing-photos .slide .listing-photo,
+    .mainPhoto
+    {
+        height: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    #slideshow_listing-photos,
+    #slideshow_listing-photos .slide,
+    #slideshow_listing-photos .slide .listing-photo,
+    .mainPhoto
+    {
+        height: 300px;
+    }
+
+    .listing .location,
+    .listing .layout
+    {
+        width: 100%;
+        margin-bottom: 10px;
+        float: none;
+    }
+
+    .listing .layout
+    {
+        text-align: left;
+    }
+
+
+    .listing .description p
+    {
+        font-size: 14px;
+    }
+
+}
