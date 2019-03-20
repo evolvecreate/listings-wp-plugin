@@ -276,13 +276,6 @@
                 $listing = $spark->api->getListingByPostName($attributes['location-key']); // TODO: this isn't the rlid, but the pretty name
                 include plugin_dir_path(__FILE__) . 'layout/listing.php';
 
-            /*
-            } else if ($attributes['mlsid']) {
-
-                $listing = $spark->api->getListingByMlsID($attributes['mlsid']);
-                include plugin_dir_path(__FILE__) . 'layout/listing.php';
-            */
-
             } else if ($attributes['listing-id']) {
 
                 $listing = $spark->api->getListingByListingID($attributes['listing-id']);
