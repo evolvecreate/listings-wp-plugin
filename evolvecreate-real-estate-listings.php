@@ -2,7 +2,7 @@
 /*
   Plugin Name: evolve create - Real Estate Listings
   Plugin URI: http://www.evolvecreate.com/wordpress-plugins/evolvecreate-real-estate-listings
-  Description: Real Estate Search and Listings pull on Spark API
+  Description: Real Estate Search and Listings pulled from Spark API
   Version: 1.1
   Author: Grenard Madrigal
   Author URI: http://www.evolvecreate.com
