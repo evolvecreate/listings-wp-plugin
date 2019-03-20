@@ -1,4 +1,4 @@
-# real estate listings
+# Spark Real Estate Listings for WordPress
 
 Wordpress Plugin for real estate search and listings, pulled from Spark API
 
