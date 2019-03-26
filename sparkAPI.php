@@ -418,7 +418,7 @@
 
             $selections = array(
                 'ListPrice',  'PublicRemarks',
-                'StreetNumber', 'StreetName', 'StreetSuffix',
+                'StreetNumber', 'StreetName', 'StreetSuffix', 'UnitNumber',
                 'City', 'SubdivisionName', 'StateOrProvince',
                 'BuildingAreaTotal', 'BedsTotal', 'BathsTotal',
                 'ModificationTimestamp', 'YearBuilt',

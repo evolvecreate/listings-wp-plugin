@@ -30,7 +30,7 @@
 
 
         <div class="location">
-            <a href="<?=$listing['link']?>"><h1><?=$listing['address']?></h1></a>
+            <a href="<?=$listing['link']?>"><h1><?=$listing['address']?> <?=$listing['data']['UnitNumber']?></h1></a>
             <h2>
             <? if ($api->isValidData($listing['subdivision'])) { ?>
             <?=$listing['subdivision']?> in
@@ -200,7 +200,7 @@
             -->
             <? //TODO: change key to sammys and add http:// restrictions ?>
             <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLbx_Lrk3GyyeL3QNFUW3WEbKqlG2J8Cs&callback=initializeGoogleMap">
+            src="https://maps.googleapis.com/maps/api/js?key=<?=GOOGLE_MAPS_API_KEY?>&callback=initializeGoogleMap">
             </script>
 
         <div id="googlemap"></div>
