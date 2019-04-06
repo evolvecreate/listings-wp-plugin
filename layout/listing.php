@@ -35,7 +35,7 @@
             <? if ($api->isValidData($listing['subdivision'])) { ?>
             <?=$listing['subdivision']?> in
             <? } ?>
-            <span class="nowrap"><?=$listing['city']?>, <?=$listing['data']['StateOrProvince']?></span>
+            <span class="nowrap"><?=$listing['city']?>, <?=$listing['state']?> <?=$listing['postalcode']?></span>
             </h2>
             <div>$<?=number_format($listing['data']['ListPrice'])?></div>
         </div>

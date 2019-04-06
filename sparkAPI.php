@@ -272,6 +272,8 @@
 
             $transformed['address'] = $this->generateListingAddress($transformed['data']);
             $transformed['city'] = $this->formatListingCity($transformed['data']['City']);
+            $transformed['state'] = $transformed['data']['StateOrProvince'];
+            $transformed['postalcode'] = $transformed['data']['PostalCode'];
 
             if (
                 ($this->isValidData($transformed['data']['SubdivisionName'])) &&
@@ -419,7 +421,7 @@
             $selections = array(
                 'ListPrice',  'PublicRemarks',
                 'StreetNumber', 'StreetName', 'StreetSuffix', 'UnitNumber',
-                'City', 'SubdivisionName', 'StateOrProvince',
+                'City', 'SubdivisionName', 'StateOrProvince', 'PostalCode',
                 'BuildingAreaTotal', 'BedsTotal', 'BathsTotal',
                 'ModificationTimestamp', 'YearBuilt',
                 'Longitude', 'Latitude',
