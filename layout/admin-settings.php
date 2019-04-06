@@ -94,10 +94,16 @@
                     <select name="<?=$key?>">
                     <option value="">Select One</option>
                         <?
-                            $pages = get_pages();
-                            foreach( $pages as $page ) {
+                            $args = array(
+                                'post_type'     => 'post',
+                                'post_status'   => 'publish',
+                                'numberposts'   => -1, // get all
+                                'orderby'       => 'date'
+                            );
+                            $posts = get_posts($args);
+                            foreach( $posts as $post ) {
                         ?>
-                            <option value="<?=$page->ID?>" <?=selected($page->ID, esc_attr(get_option($key)))?>><?=$page->post_title?></option>
+                            <option value="<?=$post->ID?>" <?=selected($post->ID, esc_attr(get_option($key)))?>><?=$post->post_title?></option>
                         <? } ?>
                     </select>
                 </div>
