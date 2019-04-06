@@ -308,7 +308,7 @@
 
             $title = $this->generateListingAddress($listing['data'], $titleOptions);
 
-            $title .= ' ' . $listing['beds'];
+            $title .= ' ' . $listing['bedrooms'];
             $title .= ' ' . $listing['baths'];
 
             if ($sanitize) {
