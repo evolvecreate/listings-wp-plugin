@@ -270,9 +270,10 @@
 
             $transformed['photo'] = $transformed['photos'][0];
 
-            $transformed['address'] = $this->generateListingAddress($transformed['data']);
+            $transformed['address'] = $this->generateListingAddress($transformed['data'], array('includeUnit' => true));
             $transformed['city'] = $this->formatListingCity($transformed['data']['City']);
             $transformed['state'] = $transformed['data']['StateOrProvince'];
+            $transformed['unit'] = $transformed['data']['UnitNumber'];
             $transformed['postalcode'] = $transformed['data']['PostalCode'];
 
             if (
@@ -348,7 +349,8 @@
             $defaultOptions = array(
                 'includeSubdivision' => false,
                 'includeCity'        => false,
-                'includeState'        => false,
+                'includeState'       => false,
+                'includeUnit'        => false
             );
 
             $options = array_merge($defaultOptions, $options);
@@ -356,6 +358,14 @@
             $address = $data['StreetNumber'] . ' ' . $data['StreetName'];
             if ($this->isValidData($data['StreetSuffix'])) {
                 $address .= ' ' . $data['StreetSuffix'];
+            }
+
+            if ($options['includeUnit']) {
+                if ($this->isValidData($data['UnitNumber'])) {
+                    $address .= ',';
+                    $address .= ' #' . $data['UnitNumber'];
+                }
+
             }
 
             if (($data['SubdivisionName']) && ($options['includeSubidivision'])) {
