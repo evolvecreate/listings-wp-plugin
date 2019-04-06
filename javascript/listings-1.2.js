@@ -32,7 +32,7 @@
 
 
         options.page = nextPage;
-        options.limit = 9;
+        options.limit = 27;
 
         $page.val(nextPage);
 
