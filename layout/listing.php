@@ -30,7 +30,7 @@
 
 
         <div class="location">
-            <a href="<?=$listing['link']?>"><h1><?=$listing['address']?> <?=$listing['data']['UnitNumber']?></h1></a>
+            <a href="<?=$listing['link']?>"><h1><?=$listing['address']?></h1></a>
             <h2>
             <? if ($api->isValidData($listing['subdivision'])) { ?>
             <?=$listing['subdivision']?> in
