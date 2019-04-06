@@ -265,14 +265,19 @@
 
     function filterCityToNeighborhood() {
 
+        var $neighborhoods = $('.select_subdivision option');
         var $citySelector = $('.select_city');
 
         var city = $citySelector.val().toLowerCase();
-        var $neighborhoods = $('.select_subdivision option');
-        var $matchingNeighborhoods = $('.select_subdivision option[data-city="' + city + '"]');
-        if ($matchingNeighborhoods.length > 0) {
-            $neighborhoods.hide();
-            $matchingNeighborhoods.show();
+        if (city) {
+            var $matchingNeighborhoods = $('.select_subdivision option[data-city="' + city + '"]');
+            if ($matchingNeighborhoods.length > 0) {
+                $neighborhoods.hide();
+                $matchingNeighborhoods.show();
+            } else {
+                $neighborhoods.show();
+            }
+
         } else {
             $neighborhoods.show();
         }
