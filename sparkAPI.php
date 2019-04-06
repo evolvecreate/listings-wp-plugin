@@ -10,7 +10,17 @@
         private $authEndpoint = 'session';
         private $authToken;
 
-        public function __construct() {}
+        protected $options = array();
+
+
+        public function __construct($options = array()) {
+
+            $defaultOptions = array(
+                'defaultPriceMin' => 90000,
+            );
+
+            $this->options = array_merge($defaultOptions, $options);
+        }
 
         private function getApiKey() {
 
@@ -241,6 +251,8 @@
             if (($options['priceMin']) || ($options['priceMax'])) {
                 if ($options['priceMin']) {
                     $priceMin = preg_replace('/[^0-9]+/', '', $options['priceMin']);
+                } else {
+                    $priceMin = $this->options['defaultPriceMin'];
                 }
 
                 if ($options['priceMax']) {
@@ -249,9 +261,9 @@
 
                 if (($priceMin) && ($priceMax)) {
                     $filters .= " AND ListPrice Bt " . $priceMin . ',' . $priceMax;
-                } else if ($options['priceMin']) {
+                } else if ($priceMin) {
                     $filters .= " AND ListPrice Ge " . $priceMin;
-                } else if ($options['priceMin']) {
+                } else if ($priceMax) {
                     $filters .= " AND ListPrice Le " . $priceMax;
                 }
             }
