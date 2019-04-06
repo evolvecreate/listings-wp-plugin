@@ -511,12 +511,14 @@
             $formatted = array();
             foreach ($subdivisions as $subdivision) {
                 $name = $this->formatSubdivision($subdivision['Value']);
-                $formatted[] = array(
+                $formatted[$name] = array(
                     'value' => $subdivision['Value'],
                     'name'  => $name,
                     'city'  => $this->getCityFromSubdivision($name)
                 );
             }
+
+            ksort($formatted);
 
             return $formatted;
         }
